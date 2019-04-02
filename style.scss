@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,700,900');
+@import url('/styles/index.scss');
+
+$color-black: #000;
+$ao-green: #7fba23;
+
+@font-face {
+    font-family: 'ao-icons';
+    src:  url('/styles/ao-icons.woff2') format('woff2'),
+  }
+
+@font-face {
+    font-family: 'ao-font';
+    src: url('/styles/AoOz-Regular.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'ao-font-bold';
+    src: url('/styles/AoOz-Bold\ \(2\).woff') format('woff'),
+}
+
+@mixin iconBarImage($content) {
+    content: $content;
+    font-family: 'ao-icons';
+    font-size: 1.5vw;
+    color: #7fba23;
+    padding: 0 .7vw;
+}
+
+@mixin iconBarText() {
+    font-family: 'ao-font-bold';
+    display: flex;
+    font-weight: 700;
+    font-size: 1vw;
+    padding: 0 .7vw;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 16px;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 62.5%;
+    color: #444;
+}
+
+// START OF GREY MENU BAR //
+
+.menuBar {
+    background-color: #3d4042;
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            color: white;
+            padding: 1.5vh 5vw;
+            align-items: center;
+                li {
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-grow: 1;
+                    font-size: .8vw;
+                    font-family: 'ao-font';
+                }
+        }
+}
+
+// END OF GREY MENU BAR //
+
+// START OF ICON BAR //
+
+.iconBar {
+    background-color: #f7f5f6;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3px 0px;
+    padding: 2vh 3vw;
+    #priceMatchPromise {
+        @include iconBarText;
+        &:before {
+            @include iconBarImage("\e924");
+        }
+    }
+    #free100DayReturns {
+        @include iconBarText;
+        &:before {
+            @include iconBarImage("\40");
+            transform: scale(-1, 1);
+        }
+    }
+    #trustPilotRated {
+        @include iconBarText;
+        align-items: center;
+        img {
+            height: 3vh;
+            padding: 0 .7vw;
+        }
+    }
+    #nextDayDelivery {
+        @include iconBarText;
+        &:before {
+            @include iconBarImage("\e925");
+        }
+    }
+    #payMonthlyAPR {
+        @include iconBarText;
+        &:before {
+            @include iconBarImage("\e651");
+        }
+    }
+}
+
+// END OF ICON BAR //
+
+.headerLogoSection {
+    height: 518.33px;
+    background-image: url("./img/header-bg_2x.jpg");
+    width: 100%;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+.smeg-logo {
+    position: absolute;
+    background-image: url("./img/smeg-logo_2x.png");
+    width: 21vw;
+    transform: translate(-50%, -50%);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 230px 0;
+}
+
+.headerLogoSection h4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2vw;
+        color: $color-black;
+        font-weight: 700;
+        font-family: 'ao-font-bold';
+}
+
+.productBar {
+    background-color: $color-black;
+    padding: 0px 50px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            color: white;
+            // height: 42px;
+            padding: 1.5vh 0vh;
+            margin: 0px 100px;
+            align-items: center;
+                li {
+                    display: flex;
+                    justify-content: center;
+                    flex-grow: 1;
+                    font-size: 1vw;
+                    font-family: 'ao-font';
+                }
+        }
+}
+
+.shopAppliancesSection {
+    // height: 223px;
+    background-color: white;
+    text-align: center;
+    // padding: 56px 0px;
+    padding: 10vh;
+    font-size: 16px;
+}
+
+.shopSmeg {
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 4px;
+    border: solid 1px #444;
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+        .rightArrow {
+            border: solid #444;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 10px;
+        }
+}
+
+// DETAILED DESIGN, EXPERT RESULTS - OVENS. SECTION //
+
+.detailedDesignSection {
+    height: 100vh;
+    width: 100%;
+    background: #cdeaec;
+    display: flex;
+}
+
+.detailedDesignText {
+    flex: 1;
+    margin: 0;
+    color: #4c6567;
+        h2 {
+            font-size: 45px;
+            font-weight: 700;
+            margin: 15% 10% 16px 20%;
+            line-height: 40px; 
+            font-family: 'ao-font-bold';
+        }
+        h3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0% 10% 16px 20%;
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 16px;
+            margin: 0% 10% 16px 20%;
+            line-height: 20px;
+        }
+}
+
+.detailedDesignImage {
+    flex: 1;
+    background-image: url('./img/slide-1_2x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+}
+
+.shopOvens {
+    padding: 10px;
+    margin: 25px 10% 16px 20%;
+    border-radius: 4px;
+    border: solid 1px #444;
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    background-color:#cdeaec;
+        .rightArrow {
+            border: solid #444;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 10px;
+        }
+}
+
+.numberSwitches {
+    display: inline-block;
+    font-size: 16px;
+    margin: 60px 10% 0% 20%;
+        .one, .two, .three, .four {
+            border-bottom: solid 3px #918f90;
+            margin-right: 16px;
+            padding-bottom: 3px;
+                &:hover {
+                    border-bottom: solid 3px hsl(184, 15%, 35%);
+                    color: #918f90;
+                }
+        }
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// RATING OVEN SECTION //
+
+.ratingSectionOven {
+    background: #eee;
+    width: 100%;
+}
+
+.innerWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.ratingStars {
+    height: 24px;
+    width: 120px;
+}
+
+.leftRatingSectionOven {
+    vertical-align: top;
+    line-height: 1.4;
+    margin-right: 20px;
+        h4 {
+            font-family: 'ao-font-bold';
+            font-size: 16px;
+        }
+        p {
+            font-size: 16px;
+        }
+}
+        
+.fiveLogo {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.big5 {
+    font-size: 130px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    vertical-align: bottom;
+    font-family: 'ao-font-bold';
+}
+.little5 {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'ao-font-bold';
+    letter-spacing: 0.5vw;
+}
+        
+.rightRatingSectionOven {
+    width: 40%;
+    line-height: 1.4;
+    margin-right: 20px;
+        h4 {
+            font-size: 28px;
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 14px;
+        }
+}
+.ratingOven {
+    text-align: center;
+}
+.ovenImage {
+    height: 150px;
+    width: 150px;
+}
+
+// INNOVATIVE FEATURES SECTION // 
+
+.innovativeFeatures {
+    background-image: url('./img/innovative-features-bg.jpg');
+    height: 95vh;
+    width: 100%;
+        h2 {
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 40px;
+            position: relative;
+            left: 10%;
+            top: 20%;
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 16px;
+            line-height: 20px;
+            position: relative;
+            top: 23%;
+            width: 35%;
+            left: 10%;
+        }
+}
+
+.shopFridgeFreezers {
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 4px;
+    border: solid 1px #444;
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    position: relative;
+    top: 150px;
+    left: 10%;
+        .rightArrow {
+            border: solid #444;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 10px;
+        }
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// RATING FRIDGE SECTION
+
+.ratingSectionFridge {
+    background: #eee;
+    width: 100%;
+}
+
+.leftRatingSectionFridge {
+    vertical-align: top;
+    line-height: 1.4;
+    margin-right: 20px;
+        h4 {
+            font-size: 16px;
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 16px;
+            margin-right: 3vw;
+        }
+}
+
+.rightRatingSectionFridge {
+    line-height: 1.4;
+    margin-right: 20px;
+        h4 {
+            font-size: 28px;
+            padding-bottom: 10px;
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 14px;
+        }
+}
+
+.fridgeImage {
+    height: 150px;
+    width: 130px;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// POWERFUL CLEANING SECTION
+
+.powerfulCleaningSection {
+    height: 100vh;
+    width: 100%;
+    background: #f1d7e0;
+    display: flex;
+}
+
+.powerfulCleaningImage {
+    flex: 1;
+    background-image: url('.//img/powerful-cleaning-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+}
+
+.powerfulCleaningText {
+    flex: 1;
+    margin: 0;
+    color: #4c6567;
+        h2 {
+            font-size: 45px;
+            font-weight: 700;
+            margin: 15% 10% 16px 20%;
+            line-height: 40px; 
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 16px;
+            margin: 0% 10% 16px 20%;
+            line-height: 20px;
+        }
+}
+
+.shopDishwasher {
+    padding: 10px;
+    margin: 25px 20% 0 20%;
+    border-radius: 4px;
+    border: solid 1px #444;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4c6567;
+    background-color:#f1d7e0;
+        .rightArrow {
+            border: solid #4c6567;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 10px;
+        }
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// INTELLIGENT TECH SECTION
+
+.intelligentTechSection {
+    height: 100vh;
+    width: 100%;
+    background: #e0f1e9;
+    display: flex;
+}
+
+.intelligentTechText {
+    flex: 1;
+    margin: 0;
+    color: #4c6567;
+        h2 {
+            font-size: 45px;
+            font-weight: 700;
+            margin: 15% 10% 16px 20%;
+            line-height: 40px; 
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 16px;
+            margin: 0% 10% 16px 20%;
+            line-height: 20px;
+        }
+}
+
+.intelligentTechImage {
+    flex: 1;
+    background-image: url('./img/intelligent-tech-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+}
+
+.shopWashing, .shopTumble {
+    padding: 10px;
+    margin: 25px 20% 0 20%;
+    border-radius: 4px;
+    border: solid 1px #444;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4c6567;
+    background-color:#e0f1e9;
+        .rightArrow {
+            border: solid #4c6567;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 10px;
+        }
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// VIBRANT COLOURS SECTION // 
+
+.vibrantColoursSection {
+    background-image: url('./img/vibrant-colours-bg.jpg');
+    background-position-x: 30%;
+    height: 100vh;
+    width: 100%;
+}
+
+.vibrantColoursText {
+    width: 50%;
+    float: right;  
+        h2 {
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 40px;
+            position: relative;
+            margin: 20% 15% 0% 15%;
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 16px;
+            line-height: 20px;
+            position: relative;
+            margin: 25px 15% 0% 15%;
+        }
+}
+
+.shopSmallAppliances {
+    padding: 10px;
+    border-radius: 4px;
+    border: solid 1px #444;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    position: relative;
+    margin: 25px 10% 0% 15%;
+        .rightArrow {
+            border: solid #444;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 10px;
+        }
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// WHY BUY SMEG SECTION
+
+.whyBuySection {
+    padding-top: 48px;
+    padding-bottom: 22.5%;
+    background-color: #efefef;
+    height: 400px;
+    width: 100%;
+    color: $color-black;
+    text-align: center;
+    color: #333;
+        h2 {
+            font-size: 36px;
+            padding-bottom: 50px;
+            font-family: 'ao-font-bold';
+        }
+}
+
+.tableContainer {
+    display: table;
+    background-color: #fff;
+    border-top: solid 8px #7fba23;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 5px 25px 5px;
+}
+
+.tableContainerCell {
+    display: table-cell;
+    width: 25%;
+    padding: 0px .85%;
+    margin: 20px 10px 0px 5px;
+        h3 {
+            font-size: 20px;
+            font-family: 'ao-font-bold';
+        }
+        p {
+            font-size: 13px;
+            margin-top: 1vw;
+        }
+}
+
+.whyBuyImage {
+    max-height: 65px;
+    margin: 10px;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// FOOTER SECTION
+
+.footerSection {
+    ul {
+        background-color: #3d4042;
+        padding: 24px 350px;
+        display: flex;
+        flex: wrap;
+        color: #c7c7c5;
+        list-style-type: none;
+    }
+    li {
+        flex-grow: 1;
+        font-size: 14px;
+        font-family: 'ao-font';
+    }
+    li:hover {
+        text-decoration: underline;
+      }
+}
